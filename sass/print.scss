@@ -1,0 +1,246 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:700,400);
+
+@font-face {
+  font-family: 'StarwarsFont'; /*a name to be used later*/
+  src: url('/asset/STARWARS.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Serif-Gothic";
+  src: url('/asset/Serif Gothic Bold.ttf');
+}
+
+@font-face {
+  font-family: "DistantGalaxy";
+  src: url('/asset/SF Distant Galaxy Outline.ttf');
+}
+
+
+html,
+body {
+ width: 100%;
+ height: 100%;
+ font: bold 1em "News Cycle", Arial;
+ letter-spacing:.15em;
+	color: #ff6;
+	background: #000;
+	overflow: hidden;
+ margin: 0;
+}
+
+// @-ms-viewport {
+//   width: device-width;
+// }
+
+@media (max-width: 750px) {
+  body {
+    font-size: 60%;
+    overflow: none !important;
+  }
+  .start {
+    font-size: 80%;
+  }
+  .intro {
+    font-size: 100%;
+  }
+  .titles {
+    font-size: 350% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+     transform-origin: 50% 106% !important;
+  }
+  .episode {
+    font-size: 70%;
+  }
+  .dateLocation li {
+    margin: 10px !important;
+  }
+  #gMap {
+    display: none;
+  }
+}
+
+#goToDetails {
+  font-size: 0.8em;
+}
+
+button {
+ background-color: black;
+ color: yellow;
+}
+
+  .starwars {
+
+   section {
+     position: absolute;
+     top: 45%;
+     left: 50%;
+     z-index: 1;
+   }
+
+ .start {
+   font-size: 200%;
+   $start-width: 14em;
+   width: $start-width;
+   margin: -4em 0 0 (- $start-width / 2);
+   text-align: center;
+   cursor: pointer;
+
+   span {
+       color: rgb(75, 213, 238);
+     }
+   }
+
+   .intro {
+     $intro-width: 15em;
+   	width: $intro-width;
+     margin: 0 0 0 (- $intro-width / 2);
+ 	  font-size: 200%;
+ 	  font-weight: 400;
+   	color: rgb(75, 213, 238);
+     opacity: 0;
+ 	  animation: intro 6s ease-out 1s;
+   }
+
+   .logo {
+     opacity: 0;
+     animation: logo 9s ease-out 9s;
+
+     svg {
+       width: inherit;
+     }
+   }
+
+   .titles {
+     $titles-width: 14.65em;
+     width: $titles-width;
+     margin: 0 0 0 (- $titles-width / 2);
+     top: auto;
+     bottom: 0;
+   	height: 50em;
+   	font-size: 450%;
+   	text-align: justify;
+ 	  overflow: hidden;
+     transform-origin: 50% 100%;
+     @include transform(perspective(350px) rotateX(25deg));
+
+     > div {
+ 	    position: absolute;
+ 	    top: 100%;
+ 	    animation: titles 81s linear 13s;
+
+       > .episode {
+         text-align: center;
+         font-size: 120%;
+       }
+
+       > p {
+ 	      margin: 1.35em 0 1.85em 0;
+         line-height: 1.35em;
+
+         @include backface-visibility(hidden);
+       }
+     }
+   }
+ }
+
+ @keyframes intro {
+   0% {
+     opacity: 0;
+   }
+ 	20% {
+     opacity: 1;
+   }
+ 	90% {
+     opacity: 1;
+   }
+ 	100% {
+     opacity: 0;
+   }
+ }
+
+ @keyframes logo {
+ 	0% {
+     $logo-width: 18em;
+   	width: $logo-width;
+     margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+
+     @include transform(scale(2.75));
+     opacity: 1;
+   }
+ 	50% {
+     opacity: 1;
+
+     $logo-width: 18em;
+   	width: $logo-width;
+     margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+   }
+ 	100% {
+     @include transform(scale(.1));
+     opacity: 0;
+
+     $logo-width: 18em;
+   	width: $logo-width;
+     margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+   }
+ }
+
+ @keyframes titles {
+ 	0% {
+     top: 100%;
+     opacity: 1;
+   }
+   95% {
+     opacity: 1;
+   }
+ 	100% {
+     top: 20%;
+     opacity: 0;
+   }
+ }
+
+.infoPage {
+  background: url("../asset/SWTFA_wp.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  $title-font-size: 6em;
+  .infoDetails {
+    text-align: center;
+    .infoTitle {
+      font-size: $title-font-size;
+      font-family: DistantGalaxy;
+    }
+    .infoSubTitle {
+      font-size: 3.5em;
+      font-family: Serif-Gothic;
+    }
+    .dateLocation {
+      list-style: none;
+      font-size: 1.6em;
+      font-family: Serif-Gothic;
+      li {
+        margin: 20px;
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .forceGreeting {
+    font-family: StarwarsFont;
+    font-size: 2em;
+  }
+}
