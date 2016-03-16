@@ -5,14 +5,14 @@
 @font-face {
   font-family: 'StarwarsFont';
   /*a name to be used later*/
-  src: url("/asset/STARWARS.ttf");
+  src: url("asset/STARWARS.ttf");
   /*URL to font*/ }
 @font-face {
   font-family: "Serif-Gothic";
-  src: url("/asset/Serif Gothic Bold.ttf"); }
+  src: url("asset/Serif Gothic Bold.ttf"); }
 @font-face {
   font-family: "DistantGalaxy";
-  src: url("/asset/SF Distant Galaxy Outline.ttf"); }
+  src: url("asset/SF Distant Galaxy Outline.ttf"); }
 html,
 body {
   width: 100%;
