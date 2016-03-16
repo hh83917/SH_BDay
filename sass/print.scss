@@ -8,17 +8,17 @@
 
 @font-face {
   font-family: 'StarwarsFont'; /*a name to be used later*/
-  src: url('asset/STARWARS.ttf'); /*URL to font*/
+  src: url('/asset/STARWARS.ttf') format('truetype'); /*URL to font*/
 }
 
 @font-face {
   font-family: "Serif-Gothic";
-  src: url('asset/Serif Gothic Bold.ttf');
+  src: url('/asset/Serif Gothic Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "DistantGalaxy";
-  src: url('asset/SF Distant Galaxy Outline.ttf');
+  src: url('/asset/SF Distant Galaxy Outline.ttf') format('truetype');
 }
 
 
