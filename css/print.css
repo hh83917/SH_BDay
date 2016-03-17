@@ -5,14 +5,14 @@
 @font-face {
   font-family: 'StarwarsFont';
   /*a name to be used later*/
-  src: url(STARWARS.ttf) format("truetype");
+  src: url("../asset/STARWARS.ttf") format("truetype");
   /*URL to font*/ }
 @font-face {
   font-family: "Serif-Gothic";
-  src: url("/asset/Serif_Gothic_Bold.ttf") format("truetype"); }
+  src: url("../asset/Serif_Gothic_Bold.ttf") format("truetype"); }
 @font-face {
   font-family: "DistantGalaxy";
-  src: url("/asset/SF_Distant_Galaxy_Outline.ttf") format("truetype"); }
+  src: url("../asset/SF_Distant_Galaxy_Outline.ttf") format("truetype"); }
 html,
 body {
   width: 100%;
